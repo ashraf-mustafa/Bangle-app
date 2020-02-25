@@ -26,19 +26,17 @@ class HomeScreen extends React.Component {
         <TouchableOpacity
           onPress={() => alert('Connecting ...')}
           style={styles.button}>
-          <Text style={{ fontSize: 30, color: '#fff' }}>   Connect   <Icon name="bluetooth" fontFamily="Ionicons.ttf" size={30} />   </Text>
-
-
-
+          <Text 
+          style={{ fontSize: 30, color: '#fff' }}>   Connect   <Icon name="bluetooth" fontFamily="Ionicons.ttf" size={30} />
+          </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           onPress={() => alert('Set time ...')}
           style={styles.button}>
-          <Text style={{ fontSize: 30, color: '#fff' }}>   Set time   <Icon name="clock-outline" fontFamily="Ionicons.ttf" size={30} />  </Text>
-
-
-
+          <Text 
+          style={{ fontSize: 30, color: '#fff' }}>   Set time   <Icon name="clock-outline" fontFamily="Ionicons.ttf" size={30} />
+          </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
@@ -65,12 +63,11 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginTop: 20,
     shadowColor: '#7F3005',
-    shadowOpacity: 0.8,
-    elevation: 6,
+    shadowOpacity: 0.6,
     shadowRadius: 15,
     shadowOffset: {
       width: 1,
-      height: 13
+      height: 8
     },
   },
   image:
@@ -126,9 +123,9 @@ const TabNavigator = createMaterialBottomTabNavigator(
           </View>
         ),
         activeColor: '#ffffff',
-        inactiveColor: '#92c5c2',
+        inactiveColor: '#ADBCCB',
         barStyle: {
-          backgroundColor: '#0D6A1A',
+          backgroundColor: '#3F4347',
           paddingBottom: 15
         },
       }
