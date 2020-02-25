@@ -1,105 +1,91 @@
-
-import React, { Component } from 'react';
+import React from 'react'
 import {
-  Container,
-  Header,
-  Title,
-  Content,
-  Button,
-  ListItem,
+  StyleSheet,
+  View,
   Text,
-  Icon,
-  Left,
-  Body,
-  Right,
-  Switch 
-  } from 'native-base';
+  TouchableOpacity,
+} from 'react-native';
 
 
-export default class SettingsScreen extends Component {
+
+export default class SettingsScreen extends React.Component {
   render() {
     return (
-      <Container>
-      <Header>
-      <Left/>
-      <Body>
-        <Title>Settings</Title>
-      </Body>
-      <Right />
-    </Header>
-        <Content>
-          <ListItem icon>
-            <Left>
-              <Button style={{ backgroundColor: "#FF9501" }}>
-                <Icon active name="" />
-              </Button>
-            </Left>
-            <Body>
-              <Text>BLE</Text>
-            </Body>
-            <Right>
-              <Switch value={false} />
-            </Right>
-          </ListItem>
 
-          <ListItem icon>
-            <Left>
-              <Button style={{ backgroundColor: "#E0674D" }}>
-                <Icon active name="" />
-              </Button>
-            </Left>
-            <Body>
-              <Text>Programmable</Text>
-            </Body>
-            <Right>
-              <Switch value={false} />
-            </Right>
-          </ListItem>
+      <View style={styles.container}>
 
-          <ListItem icon>
-            <Left>
-              <Button style={{ backgroundColor: "#0D6A1A" }}>
-                <Icon active name="" />
-              </Button>
-            </Left>
-            <Body>
-              <Text>Beep</Text>
-            </Body>
-            <Right>
-              <Switch value={false} />
-            </Right>
-          </ListItem>
+        <TouchableOpacity
+          onPress={() => alert('Coming soon ..')}
+          style={styles.button}>
+          <Text style={{ fontSize: 15, color: '#fff' }}>   Compass   </Text>
 
-          <ListItem icon>
-            <Left>
-              <Button style={{ backgroundColor: "#007AFF" }}>
-                <Icon active name="" />
-              </Button>
-            </Left>
-            <Body>
-              <Text>Vibration</Text>
-            </Body>
-            <Right>
-              <Switch value={false} />
-            </Right>
-          </ListItem>
+        </TouchableOpacity>
 
-          <ListItem icon>
-            <Left>
-              <Button style={{ backgroundColor: "#007AFF" }}>
-                <Icon active name="" />
-              </Button>
-            </Left>
-            <Body>
-              <Text>HID</Text>
-            </Body>
-            <Right>
-            <Switch value={false} />
-            </Right>
-          </ListItem>
-          
-        </Content>
-      </Container>
-    );
+        <TouchableOpacity
+          onPress={() => alert('Coming soon ..')}
+          style={styles.button}>
+          <Text style={{ fontSize: 15, color: '#fff' }}>   GPS Info   </Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => alert('Coming soon ..')}
+          style={styles.button}>
+          <Text style={{ fontSize: 15, color: '#fff' }}>Stopwatch</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => alert('Coming soon ..')}
+          style={styles.button}>
+          <Text style={{ fontSize: 15, color: '#fff' }}>Show Color</Text>
+        </TouchableOpacity>
+        <TouchableOpacity
+          onPress={() => alert('Coming soon ..')}
+          style={styles.button}>
+          <Text style={{ fontSize: 15, color: '#fff' }}>BLE Scanner</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => alert('Coming soon ..')}
+          style={styles.button}>
+          <Text style={{ fontSize: 15, color: '#fff' }}>Analogue Clock</Text>
+        </TouchableOpacity>
+
+        <TouchableOpacity
+          onPress={() => alert('Coming soon ..')}
+          style={styles.button}>
+          <Text style={{ fontSize: 15, color: '#fff' }}>    About    </Text>
+        </TouchableOpacity>
+
+
+      </View>
+    )
   }
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+    backgroundColor: '#CCE5F6',
+  },
+  button: {
+    backgroundColor: "#074FBF",
+    padding: 20,
+    borderRadius: 15,
+    marginTop: 20,
+    shadowColor: '#074FBF',
+    shadowOpacity: 0.8,
+    shadowRadius: 10,
+    shadowOffset: {
+      width: 1,
+      height: 8
+    },
+  },
+  image:
+  {
+    width: 405,
+    height: 119,
+    borderRadius: 15,
+    marginBottom: 80,
+  },
+});
