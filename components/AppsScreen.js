@@ -11,33 +11,29 @@ import {
   Left,
   Body,
   Right,
-  Switch
+  Switch,
+  ScrollView
 } from 'native-base';
 import {
   StyleSheet
 } from 'react-native';
 
 import Icon from 'react-native-vector-icons/MaterialCommunityIcons';
+import ICON from 'react-native-vector-icons/FontAwesome5';
 
 
 export default class AppsScreen extends Component {
   render() {
     return (
-      <Container style={styles.container}>
-        <Header>
-          <Left />
-          <Body>
-            <Title>Applications</Title>
-          </Body>
-          <Right />
-        </Header>
-        <Content>
 
-        
+      <Container style={styles.container}>
+
+        <Content style={{ height: 2000 }} >
+
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#E0674D" }}>
-                <Icon name="apps-box" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="apps-box" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
@@ -51,11 +47,11 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#FF9501" }}>
-                <Icon name="bluetooth" fontFamily="FontAwesome.ttf" size={20} color='#ffffff' />
+                <Icon name="bluetooth" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
-              <Text>BLE</Text>
+              <Text>Bluetooth Widget</Text>
             </Body>
             <Right>
               <Switch value={false} />
@@ -65,11 +61,11 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#0D53D6" }}>
-                <Icon name="code-braces" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="clock-out" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
-              <Text>Programmable</Text>
+              <Text>Center Clock</Text>
             </Body>
             <Right>
               <Switch value={false} />
@@ -79,11 +75,11 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#0D6A1A" }}>
-                <Icon name="bullhorn" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="matrix" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
-              <Text>Beep</Text>
+              <Text>Binary Clock</Text>
             </Body>
             <Right>
               <Switch value={false} />
@@ -93,11 +89,11 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#007AFF" }}>
-                <Icon name="watch-vibrate" size={20} color='#ffffff' />
+                <Icon name="flag-triangle" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
-              <Text>Vibration</Text>
+              <Text>Espruino Flag Raiser</Text>
             </Body>
             <Right>
               <Switch value={false} />
@@ -121,7 +117,7 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#DC1D06" }}>
-                <Icon name="heart-pulse" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="heart-pulse" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
@@ -135,7 +131,7 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#DC8406" }}>
-                <Icon name="satellite-uplink" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="satellite-uplink" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
@@ -149,7 +145,7 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#0D53D6" }}>
-                <Icon name="alarm" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="alarm" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
@@ -163,7 +159,7 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#E0674D" }}>
-                <Icon name="battery" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="battery" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
@@ -177,7 +173,7 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#0D6A1A" }}>
-                <Icon name="music-note-bluetooth" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="music-note-bluetooth" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
@@ -191,7 +187,7 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#E0674D" }}>
-                <Icon name="duck" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="duck" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
@@ -205,7 +201,7 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#007AFF" }}>
-                <Icon name="cube-unfolded" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="cube-unfolded" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
@@ -219,7 +215,7 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#E0674D" }}>
-                <Icon name="keyboard-variant" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="keyboard-variant" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
@@ -233,7 +229,7 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#FF9501" }}>
-                <Icon name="satellite-variant" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="satellite-variant" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
@@ -247,7 +243,7 @@ export default class AppsScreen extends Component {
           <ListItem icon>
             <Left>
               <Button style={{ backgroundColor: "#0D6A1A" }}>
-                <Icon name="clock-fast" fontFamily="Ionicons.ttf" size={20} color='#ffffff' />
+                <Icon name="clock-fast" size={20} color='#ffffff' />
               </Button>
             </Left>
             <Body>
@@ -258,8 +254,66 @@ export default class AppsScreen extends Component {
             </Right>
           </ListItem>
 
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: "#0D53D6" }}>
+                <Icon name="hand" size={20} color='#ffffff' />
+              </Button>
+            </Left>
+            <Body>
+              <Text>Gesture Test </Text>
+            </Body>
+            <Right>
+              <Switch value={false} />
+            </Right>
+          </ListItem>
+
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: "#E0674D" }}>
+                <ICON name="horse" size={20} color='#ffffff' />
+              </Button>
+            </Left>
+            <Body>
+              <Text> Horse Race </Text>
+            </Body>
+            <Right>
+              <Switch value={false} />
+            </Right>
+          </ListItem>
+
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: "#FF9501" }}>
+                <ICON name="bell" size={20} color='#ffffff' />
+              </Button>
+            </Left>
+            <Body>
+              <Text> Jingle Bells </Text>
+            </Body>
+            <Right>
+              <Switch value={false} />
+            </Right>
+          </ListItem>
+
+          <ListItem icon>
+            <Left>
+              <Button style={{ backgroundColor: "#DC1D06" }}>
+                <ICON name="walking" size={20} color='#ffffff' />
+              </Button>
+            </Left>
+            <Body>
+              <Text> Pedometer widget </Text>
+            </Body>
+            <Right>
+              <Switch value={false} />
+            </Right>
+          </ListItem>
+
         </Content>
+
       </Container>
+
     );
   }
 }
@@ -267,5 +321,6 @@ export default class AppsScreen extends Component {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#EAF0EC',
+    marginTop: 80
   },
 });

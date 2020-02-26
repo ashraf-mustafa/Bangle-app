@@ -8,7 +8,9 @@ import {
 } from 'react-native';
 
 import { createAppContainer } from 'react-navigation';
-import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
+import {
+  createMaterialBottomTabNavigator
+} from 'react-navigation-material-bottom-tabs';
 import logo from './assets/bangle.jpeg';
 import AppsScreen from './components/AppsScreen'
 import SettingsScreen from './components/SettingsScreen'
@@ -26,16 +28,16 @@ class HomeScreen extends React.Component {
         <TouchableOpacity
           onPress={() => alert('Connecting ...')}
           style={styles.button}>
-          <Text 
-          style={{ fontSize: 30, color: '#fff' }}>   Connect   <Icon name="bluetooth" fontFamily="Ionicons.ttf" size={30} />
+          <Text
+            style={{ fontSize: 30, color: '#fff' }}>   Connect   <Icon name="bluetooth" size={30} />
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           onPress={() => alert('Set time ...')}
           style={styles.button}>
-          <Text 
-          style={{ fontSize: 30, color: '#fff' }}>   Set time   <Icon name="clock-outline" fontFamily="Ionicons.ttf" size={30} />
+          <Text
+            style={{ fontSize: 30, color: '#fff' }}>   Set time   <Icon name="clock-outline" size={30} />
           </Text>
         </TouchableOpacity>
 
@@ -58,7 +60,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#ECC3BB',
   },
   button: {
-    backgroundColor: "#E0674D",
+    backgroundColor: "#EA765D",
     padding: 20,
     borderRadius: 15,
     marginTop: 20,
@@ -77,6 +79,10 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginBottom: 80,
   },
+  icon:
+  {
+
+  }
 });
 
 
@@ -94,32 +100,32 @@ const TabNavigator = createMaterialBottomTabNavigator(
         ),
       }
     },
-    Apps: {
+    Settings: {
       screen: SettingsScreen,
       navigationOptions: {
         tabBarLabel: <Text style={{ fontSize: 17 }}> Settings </Text>,
         tabBarIcon: ({ tintColor }) => (
           <View>
-            <Icon name="settings" fontFamily="Ionicons.ttf" size={20} color={tintColor} />
+            <Icon name="settings" size={20} color={tintColor} />
 
           </View>
         ),
         activeColor: '#ffffff',
-        inactiveColor: '#a3c2fa',
+        inactiveColor: '#A3E4D7',
         barStyle: {
-          backgroundColor: '#074FBF',
+          backgroundColor: '#145A32',
           paddingBottom: 15
         },
 
       }
     },
-    Settings: {
+    Apps: {
       screen: AppsScreen,
       navigationOptions: {
         tabBarLabel: <Text style={{ fontSize: 17 }}> Applicaions </Text>,
         tabBarIcon: ({ tintColor }) => (
           <View>
-            <Icon name="apps" fontFamily="Ionicons.ttf" size={20} color={tintColor} />
+            <Icon name="apps" size={20} color={tintColor} />
           </View>
         ),
         activeColor: '#ffffff',
@@ -134,10 +140,10 @@ const TabNavigator = createMaterialBottomTabNavigator(
 
   {
     initialRouteName: 'Home',
-    activeColor: '#7F3005',
+    activeColor: '#542004',
     inactiveColor: '#ffffff',
     barStyle: {
-      backgroundColor: '#E0674D',
+      backgroundColor: '#CA573E',
       paddingBottom: 15,
     },
   }
