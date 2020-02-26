@@ -106,7 +106,7 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    backgroundColor: '#7DCEA0',
+    backgroundColor: '#A3E4D7',
     flexDirection: 'row',
     flexWrap: 'wrap',
     paddingTop: 160
