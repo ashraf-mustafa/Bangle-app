@@ -25,9 +25,9 @@ class HomeScreen extends React.Component {
     return (
 
       <View style={styles.container}>
-      <Image source={logo} style={styles.logo} />
-      <Image source={photo} style={styles.image} />
-      
+        <Image source={logo} style={styles.logo} />
+        <Image source={photo} style={styles.image} />
+
         <TouchableOpacity
           onPress={() => alert('Connecting ...')}
           style={styles.button}>
@@ -62,6 +62,7 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     backgroundColor: '#ECC3BB',
   },
+
   button: {
     backgroundColor: "#EA765D",
     padding: 20,
@@ -75,6 +76,7 @@ const styles = StyleSheet.create({
       height: 8
     },
   },
+
   image:
   {
     width: 405,
@@ -82,24 +84,25 @@ const styles = StyleSheet.create({
     borderRadius: 15,
     marginBottom: 50,
   },
+
   logo:
   {
     width: 200,
     height: 50,
-    marginBottom:20,
+    marginBottom: 20,
   },
 
-  text: 
+  text:
   {
-    fontSize: 30, 
-    color: '#fff', 
+    fontSize: 30,
+    color: '#fff',
     fontWeight: "bold",
     shadowOpacity: 2,
     shadowRadius: 5,
-    shadowOffset: 
-    { 
-      width: 0, 
-      height: 2 
+    shadowOffset:
+    {
+      width: 0,
+      height: 2
     },
   }
 });
@@ -119,6 +122,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
         ),
       }
     },
+
     Settings: {
       screen: SettingsScreen,
       navigationOptions: {
@@ -138,6 +142,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
 
       }
     },
+    
     Apps: {
       screen: AppsScreen,
       navigationOptions: {
