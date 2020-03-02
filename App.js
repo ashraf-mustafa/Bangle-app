@@ -11,7 +11,8 @@ import { createAppContainer } from 'react-navigation';
 import {
   createMaterialBottomTabNavigator
 } from 'react-navigation-material-bottom-tabs';
-import logo from './assets/bangle.jpeg';
+import photo from './assets/bangle.jpeg';
+import logo from './assets/bangleLogo.png';
 import AppsScreen from './components/AppsScreen'
 import SettingsScreen from './components/SettingsScreen'
 
@@ -24,12 +25,14 @@ class HomeScreen extends React.Component {
     return (
 
       <View style={styles.container}>
-        <Image source={logo} style={styles.image} />
+      <Image source={logo} style={styles.logo} />
+      <Image source={photo} style={styles.image} />
+      
         <TouchableOpacity
           onPress={() => alert('Connecting ...')}
           style={styles.button}>
           <Text
-            style={{ fontSize: 30, color: '#fff' }}>   Connect   <Icon name="bluetooth" size={30} />
+            style={styles.text}>   Connect   <Icon name="bluetooth" size={30} />
           </Text>
         </TouchableOpacity>
 
@@ -37,14 +40,14 @@ class HomeScreen extends React.Component {
           onPress={() => alert('Set time ...')}
           style={styles.button}>
           <Text
-            style={{ fontSize: 30, color: '#fff' }}>   Set time   <Icon name="clock-outline" size={30} />
+            style={styles.text}>   Set time   <Icon name="clock-outline" size={30} />
           </Text>
         </TouchableOpacity>
 
         <TouchableOpacity
           onPress={() => alert('Coming soon ..')}
           style={styles.button}>
-          <Text style={{ fontSize: 30, color: '#fff' }}>Something ...  </Text>
+          <Text style={styles.text}>Something ...  </Text>
         </TouchableOpacity>
       </View>
     )
@@ -77,11 +80,27 @@ const styles = StyleSheet.create({
     width: 405,
     height: 119,
     borderRadius: 15,
-    marginBottom: 80,
+    marginBottom: 50,
   },
-  icon:
+  logo:
   {
+    width: 200,
+    height: 50,
+    marginBottom:20,
+  },
 
+  text: 
+  {
+    fontSize: 30, 
+    color: '#fff', 
+    fontWeight: "bold",
+    shadowOpacity: 2,
+    shadowRadius: 5,
+    shadowOffset: 
+    { 
+      width: 0, 
+      height: 2 
+    },
   }
 });
 
