@@ -114,7 +114,7 @@ const TabNavigator = createMaterialBottomTabNavigator(
     Home: {
       screen: HomeScreen,
       navigationOptions: {
-        tabBarLabel: <Text style={{ fontSize: 17 }}> Home </Text>,
+
         tabBarIcon: ({ tintColor }) => (
           <View>
             <Icon name="home" fontFamily="Ionicons.ttf" size={20} color={tintColor} />
@@ -126,11 +126,10 @@ const TabNavigator = createMaterialBottomTabNavigator(
     Settings: {
       screen: SettingsScreen,
       navigationOptions: {
-        tabBarLabel: <Text style={{ fontSize: 17 }}> Settings </Text>,
+        // tabBarLabel: <Text style={{ fontSize: 17 }}> Settings </Text>,
         tabBarIcon: ({ tintColor }) => (
           <View>
             <Icon name="settings" size={20} color={tintColor} />
-
           </View>
         ),
         activeColor: '#ffffff',
@@ -143,10 +142,10 @@ const TabNavigator = createMaterialBottomTabNavigator(
       }
     },
     
-    Apps: {
+    Applications: {
       screen: AppsScreen,
       navigationOptions: {
-        tabBarLabel: <Text style={{ fontSize: 17 }}> Applicaions </Text>,
+        // tabBarLabel: <Text style={{ fontSize: 17 }}> Applicaions </Text>,
         tabBarIcon: ({ tintColor }) => (
           <View>
             <Icon name="apps" size={20} color={tintColor} />
